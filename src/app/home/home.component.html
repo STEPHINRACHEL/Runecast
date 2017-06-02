@@ -1,0 +1,69 @@
+<div class="panel panel-default">
+<div class="panel-heading text-center">
+<!--       <img src="//placehold.it/60x20">-->
+
+    <div style="float:right;" >
+    <a style="float:right;cursor:pointer;margin-top: 6px;">Logout <strong >{{" : "+myService.name}}</strong></a>
+    <img style="float:right;padding-right: 10px;" width="40px"  src="../../assets/images/user.png" />
+       
+        <div style="clear:both;"></div>
+    </div>
+    
+    <div style="float:left;">
+        <h1>Angular Application </h1>   
+    </div>
+    <div style="clear:both;"></div>
+</div>
+</div>
+
+
+
+    
+    <!-- Submitted March 7 @ 11:05pm  -->
+<div class="container">
+    <div class="row">
+        <div  >            
+        <input class="form-control"[(ngModel)]="searchParam" placeholder="Search Task">
+       
+        <br>
+<!--        <table class="table table-striped table-bordered" *ngIf="hasRecords">-->
+            <table class="table table-striped table-bordered">
+
+            <thead>
+                <tr>                    
+                <th class="col-xs-1" (click)="changeSortBase('kbid')">kbid</th>
+                <th class="col-xs-1" (click)="changeSortBase('affects')">affects</th>
+                <th class="col-xs-1" (click)="changeSortBase('annotation')">annotation</th>
+                <th class="col-xs-1" (click)="changeSortBase('annotationModified')">annotationModified</th>
+                <th class="col-xs-1" (click)="changeSortBase('appliesTo')">appliesTo</th>
+                <th class="col-xs-1" (click)="changeSortBase('riskRating')">riskRating</th>
+                <th class="col-xs-3" (click)="changeSortBase('title')">title</th>
+                <th class="col-xs-1" (click)="changeSortBase('type')">type</th>
+                <th class="col-xs-1" (click)="changeSortBase('affObjectsCount')">affObjectsCount</th>  
+                </tr>
+            </thead>
+            <tbody>
+                
+                
+                <tr *ngFor="let h of myService.jsonData|sort:sortBase:directionObj[sortBase] | filter:searchParam">
+                    <td>{{h.kbid}}</td>
+                    <td>{{h.affects}} </td>
+                    <td>{{h.annotation}} </td>
+                    <td>{{h.annotationModified}} </td>
+                    <td>{{h.appliesTo}} </td>
+                    <td>{{h.riskRating}} </td>
+                    <td>{{h.title}} </td>
+                    <td>{{h.type}} </td>
+                    <td>{{h.affObjectsCount}} </td>                
+                </tr>
+            </tbody>
+        </table>
+             </div>
+
+        
+    </div>
+    
+</div><!--./container -->
+
+
+
