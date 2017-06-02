@@ -7,7 +7,9 @@ export class TodoServiceService {
   public name="";
   
   users:User[]=      [
-                      {uname:"ebin",pswd:"12345"}
+                      {uname:"stephin",pswd:"12345"},
+                      {uname:"john",pswd:"123456"},
+                      {uname:"rcuser",pswd:"Runecast!"}
                       
                      ];
    

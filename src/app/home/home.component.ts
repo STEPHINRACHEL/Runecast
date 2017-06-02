@@ -21,14 +21,14 @@ export class HomeComponent implements OnInit {
   
   
   
-  add():void{
+  /*add():void{
   if(this.task)
   {
-  this.myService.addTask(this.myService.name,this.task)
+  //this.myService.addTask(this.myService.name,this.task)
   this.task="";
   this.hasRecords=true;
   }
-  }
+  }*/ 
   changeSortBase(base):void{
   this.sortBase=base;
   if(this.directionObj[base]=="up" || this.directionObj[base]==undefined){
